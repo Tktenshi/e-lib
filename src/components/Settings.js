@@ -2,13 +2,13 @@ import React from 'react';
 import '../styles/settings.css';
 
 class Settings extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            bookName: (this.props && this.props.bookName) || "",
-            author: (this.props && this.props.author) || "",
-            year: (this.props && this.props.year) || "",
-            pages: (this.props && this.props.pages) || "",
+            bookName: this.props.bookName || "",
+            author: this.props.author || "",
+            year: this.props.year || "",
+            pages: this.props.pages || "",
         };
     }
 

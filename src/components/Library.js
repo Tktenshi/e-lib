@@ -20,6 +20,7 @@ class Library extends React.Component {
                         <Book key={i}
                               bookName={book.bookName}
                               author={book.author}
+                              id={book.id}
                         />
                     )
                 })}

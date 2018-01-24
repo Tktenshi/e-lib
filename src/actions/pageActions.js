@@ -7,6 +7,7 @@ import {books} from "../consts/consts";
 
 export function createBook(book) {
     const booksArr = getItem(books) || [];
+    book.id = booksArr.length + 1;
     booksArr.push(book);
     setItem(books, booksArr);
     return {
@@ -17,7 +18,8 @@ export function createBook(book) {
 
 export function deleteBook(book) {
     const booksArr = getItem(books) || [];
-    booksArr.push(book);
+
+    //booksArr.push(book);
     setItem(books, booksArr);
     return {
         type: CHANGED_BOOK,
