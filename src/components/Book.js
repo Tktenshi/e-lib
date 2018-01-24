@@ -7,13 +7,17 @@ class Book extends React.Component {
         this.state = {};
     }
 
+    btnDelClick = (evt) => {
+        this.props.deleteBook();
+    };
+
     render() {
         return (
             <div className="book">
                 <p>{this.props.bookName}</p>
                 <p>Автор: {this.props.author}</p>
                 <button>ред</button>
-                <button>дел</button>
+                <button onClick={this.btnDelClick}>дел</button>
             </div>
         )
     }

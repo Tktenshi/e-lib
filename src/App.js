@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './styles/app.css';
-import Settings from "./components/Settings";
-import Library from "./components/Library";
+import Settings from "./containers/SettingsContainer";
+import Library from "./containers/LibraryContainer";
 
 class App extends Component {
     render() {

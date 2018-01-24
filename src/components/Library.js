@@ -1,6 +1,6 @@
 import React from 'react';
 import '../styles/library.css';
-import Book from "./Book";
+import Book from "../containers/BookContainer";
 import {getItem} from "../utils/LocalStorage";
 import {books} from "../consts/consts";
 
@@ -11,7 +11,7 @@ class Library extends React.Component {
     }
 
     render() {
-        const booksArr = getItem(books);
+        const booksArr = this.props.books || getItem(books);
         return (
             <div className="library">
                 <h1>Library</h1>
