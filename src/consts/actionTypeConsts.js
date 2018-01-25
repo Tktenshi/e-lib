@@ -1,1 +1,2 @@
-export const CHANGED_BOOK = "CHANGED_BOOK";
+export const CHANGED_BOOKS = "CHANGED_BOOKS";
+export const SET_EDIT_BOOK = "SET_EDIT_BOOK";

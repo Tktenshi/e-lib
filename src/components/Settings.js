@@ -5,20 +5,33 @@ class Settings extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            bookName: this.props.bookName || "",
-            author: this.props.author || "",
-            year: this.props.year || "",
-            pages: this.props.pages || "",
+            bookName: this.props.currentBook.bookName || "",
+            author: this.props.currentBook.author || "",
+            year: this.props.currentBook.year || "",
+            pages: this.props.currentBook.pages || "",
         };
     }
 
-    saveClick = () => {
-        this.props.createBook({
-            bookName: this.state.bookName,
-            author: this.state.author,
-            year: this.state.year,
-            pages: this.state.pages,
+    componentWillReceiveProps(nextProps) {
+        this.setState({
+            bookName: nextProps.currentBook.bookName || "",
+            author: nextProps.currentBook.author || "",
+            year: nextProps.currentBook.year || "",
+            pages: nextProps.currentBook.pages || "",
         });
+    }
+
+    saveClick = () => {
+        if (this.props.currentBook.id) {
+            console.log("edit");
+        } else {
+            this.props.createBook({
+                bookName: this.state.bookName,
+                author: this.state.author,
+                year: this.state.year,
+                pages: this.state.pages,
+            });
+        }
         this.setState({
             bookName: "",
             author: "",

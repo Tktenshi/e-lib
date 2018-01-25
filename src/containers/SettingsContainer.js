@@ -4,7 +4,7 @@ import {createBook} from "../actions/pageActions";
 
 const mapStateToProps = (state) => {
     return {
-        // quickAccessCur: state.converterRed.quickAccessCur,
+        currentBook: state.libReducer.currentBook,
     };
 };
 

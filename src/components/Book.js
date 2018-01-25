@@ -5,14 +5,14 @@ class Book extends React.Component {
     constructor(props) {
         super(props);
         this.state = {};
-        this.id = this.props.id;
-        console.log(this.props);
     }
 
     btnDelClick = (evt) => {
-        console.log(evt.target);
-        console.log(this.id);
-        this.props.deleteBook();
+        this.props.deleteBook(this.props.id);
+    };
+
+    btnEditClick = (evt) => {
+        this.props.editBook(this.props.id);
     };
 
     render() {
@@ -20,7 +20,7 @@ class Book extends React.Component {
             <div className="book">
                 <p>{this.props.bookName}</p>
                 <p>Автор: {this.props.author}</p>
-                <button>ред</button>
+                <button onClick={this.btnEditClick}>ред</button>
                 <button onClick={this.btnDelClick}>дел</button>
             </div>
         )
