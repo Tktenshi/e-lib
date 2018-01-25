@@ -1,7 +1,7 @@
 import {CHANGED_BOOKS, SET_EDIT_BOOK} from "../consts/actionTypeConsts";
 
 const initionalState = {
-    currentBook: "",
+    currentBook: {}
 };
 
 export function libReducer(state = initionalState, action) {
@@ -9,7 +9,8 @@ export function libReducer(state = initionalState, action) {
         case CHANGED_BOOKS:
             return {
                 ...state,
-                books: action.payload
+                books: action.payload,
+                currentBook: {}
             };
         case SET_EDIT_BOOK:
             return {

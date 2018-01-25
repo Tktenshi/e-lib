@@ -1,6 +1,6 @@
 import Settings from '../components/Settings'
 import {connect} from 'react-redux';
-import {createBook} from "../actions/pageActions";
+import {createBook, editBook} from "../actions/pageActions";
 
 const mapStateToProps = (state) => {
     return {
@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         createBook: function (book) {
             dispatch(createBook(book))
+        },
+        editBook: function (book) {
+            dispatch(editBook(book))
         },
     };
 };

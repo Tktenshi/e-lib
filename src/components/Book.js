@@ -1,14 +1,23 @@
 import React from 'react';
 import '../styles/book.css';
+import Alert from '../components/Alert';
 
 class Book extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {};
+        this.state = {
+            typeAlert: false,
+        };
+        this.alertConfirm = null;
     }
 
     btnDelClick = (evt) => {
-        this.props.deleteBook(this.props.id);
+        this.setState({typeAlert: "delete"});
+        this.alertConfirm = () => {
+            this.props.deleteBook(this.props.id);
+            this.setState({typeAlert: false});
+        }
+
     };
 
     btnEditClick = (evt) => {
@@ -22,6 +31,10 @@ class Book extends React.Component {
                 <p>Автор: {this.props.author}</p>
                 <button onClick={this.btnEditClick}>ред</button>
                 <button onClick={this.btnDelClick}>дел</button>
+                {
+                    this.state.typeAlert &&
+                    <Alert typeAlert={this.state.typeAlert} alertConfirm={this.alertConfirm}/>
+                }
             </div>
         )
     }

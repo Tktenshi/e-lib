@@ -1,6 +1,6 @@
 import Book from '../components/Book'
 import {connect} from 'react-redux';
-import {deleteBook, editBook} from "../actions/pageActions";
+import {deleteBook, setEditBook} from "../actions/pageActions";
 
 const mapStateToProps = (state) => {
     return {
@@ -11,11 +11,11 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         editBook: function (bookId) {
-            dispatch(editBook(bookId))
+            dispatch(setEditBook(bookId))
         },
         deleteBook: function (bookId) {
             dispatch(deleteBook(bookId))
-        },
+        }
     };
 };
 

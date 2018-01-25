@@ -23,7 +23,10 @@ class Settings extends React.Component {
 
     saveClick = () => {
         if (this.props.currentBook.id) {
-            console.log("edit");
+            this.props.editBook({
+                id: this.props.currentBook.id,
+                ...this.state
+            });
         } else {
             this.props.createBook({
                 bookName: this.state.bookName,
@@ -32,12 +35,6 @@ class Settings extends React.Component {
                 pages: this.state.pages,
             });
         }
-        this.setState({
-            bookName: "",
-            author: "",
-            year: "",
-            pages: "",
-        });
     };
 
     handleChange = (evt) => {
