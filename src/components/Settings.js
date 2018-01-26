@@ -22,6 +22,19 @@ class Settings extends React.Component {
     }
 
     saveClick = () => {
+        //2018-01-27
+        if (!this.state.bookName) {
+            alert("Введите название книги");
+            return;
+        }
+        if (isNaN(+this.state.pages)) {
+            alert("Количество страниц должно быть числом");
+            return;
+        }
+        if (this.state.year && !/^\d{4}\.\d{2}\.\d{2}$/.test(this.state.year)) {
+            alert("Год издания должен быть в формате 'ГГГГ.ММ.ДД'");
+            return;
+        }
         if (this.props.currentBook.id) {
             this.props.editBook({
                 id: this.props.currentBook.id,
@@ -52,7 +65,8 @@ class Settings extends React.Component {
                     <input type="text" name="author" value={this.state.author} onChange={this.handleChange}/>
                 </label>
                 <label>Год издания
-                    <input type="date" name="year" value={this.state.year} onChange={this.handleChange}/>
+                    <input type="date" placeholder="ГГГГ.ММ.ДД" name="year" value={this.state.year}
+                           onChange={this.handleChange}/>
                 </label>
                 <label>Количество страниц
                     <input type="number" step="1" name="pages" value={this.state.pages} onChange={this.handleChange}/>
