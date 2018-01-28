@@ -6,7 +6,7 @@ import Library from "./containers/LibraryContainer";
 class App extends Component {
     render() {
         return (
-            <div className="app">
+            <div className="app-lib">
                 <Settings/>
                 <Library/>
             </div>

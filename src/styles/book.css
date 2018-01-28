@@ -1,5 +1,7 @@
 .book{
-  display: flex;
-  flex-wrap: wrap;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
   border: 2px solid black;
+  min-width: 11.6em;
+  display: inline;
 }

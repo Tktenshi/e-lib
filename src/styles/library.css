@@ -1,5 +1,16 @@
-.library{
+.library {
     /*display: flex;*/
     /*flex-wrap: wrap;*/
-    border: 2px solid red;
+    /*border: 2px solid red;*/
+    /*flex-grow: 1;*/
+    /*flex-shrink: 1;*/
+    /*align-self: stretch;*/
+    display: flex;
+    max-width: calc(99.9% - 14.1em);
+    /*justify-content: flex-start;*/
+    /*align-items: flex-start;*/
+    /*align-content: flex-start;*/
+    flex-wrap: wrap;
+    /*flex-direction: column;*/
+
 }

@@ -3,6 +3,7 @@ import '../styles/library.css';
 import Book from "../containers/BookContainer";
 import {getItem} from "../utils/LocalStorage";
 import {books} from "../consts/consts";
+import FilterSearch from "./FilterSearch";
 
 class Library extends React.Component {
     constructor() {
@@ -14,7 +15,7 @@ class Library extends React.Component {
         const booksArr = this.props.books || getItem(books);
         return (
             <div className="library">
-                <h1>Library</h1>
+                <FilterSearch/>
                 {booksArr && booksArr.map((book, i) => {
                     return (
                         <Book key={i}

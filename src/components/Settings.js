@@ -56,12 +56,12 @@ class Settings extends React.Component {
 
     render() {
         return (
-            <div className="settings">
-                <h1>Настройки</h1>
+            <fieldset className="fieldset settings">
+                <legend className="main-header">Настройки</legend>
                 <label>Название книги
                     <input type="text" name="bookName" value={this.state.bookName} onChange={this.handleChange}/>
                 </label>
-                <label>Автор книги
+                <label>Автор
                     <input type="text" name="author" value={this.state.author} onChange={this.handleChange}/>
                 </label>
                 <label>Год издания
@@ -72,7 +72,7 @@ class Settings extends React.Component {
                     <input type="number" step="1" name="pages" value={this.state.pages} onChange={this.handleChange}/>
                 </label>
                 <button onClick={this.saveClick}>Сохранить</button>
-            </div>
+            </fieldset>
         )
     }
 }

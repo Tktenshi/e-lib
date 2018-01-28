@@ -26,7 +26,7 @@ class Book extends React.Component {
 
     render() {
         return (
-            <div className="book">
+            <fieldset className="book">
                 <p>{this.props.bookName}</p>
                 <p>Автор: {this.props.author}</p>
                 <button onClick={this.btnEditClick}>ред</button>
@@ -35,7 +35,7 @@ class Book extends React.Component {
                     this.state.typeAlert &&
                     <Alert typeAlert={this.state.typeAlert} alertConfirm={this.alertConfirm}/>
                 }
-            </div>
+            </fieldset>
         )
     }
 }

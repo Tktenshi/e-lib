@@ -1,6 +1,49 @@
-.app {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2em;
+@import url('https://fonts.googleapis.com/css?family=Neucha&subset=cyrillic');
+
+.app-lib {
+    font: 18px 'Comic Sans MS', serif;
+    margin: 1em;
+    display: flex;
+    /*flex-wrap: wrap;*/
+    align-items: flex-start;
+    /*width: 100%;*/
+    justify-content: center;
+}
+
+.app-lib input:not([type="radio"]) {
+    font: 1em 'Comic Sans MS', serif;
+    max-width: 10em;
+    border: 2px solid black;
+    display: block;
+}
+
+.app-lib label {
+    display: block;
+}
+
+.app-lib button {
+    font: 0.9em 'Comic Sans MS', serif;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 0.2em;
+    box-shadow: 0.15em 0.15em 0.2em black;
+    background-color: white;
+}
+
+.app-lib button:hover {
+    background-color: #DDDDDD;
+}
+
+.app-lib button:active  {
+    box-shadow: 0.1em 0.1em 0.1em black;
+    transform: translateY(0.05em);
+}
+
+.fieldset {
+    border: 2px solid black;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-around;*/
+    /*align-items: stretch;*/
 }
 
