@@ -31,10 +31,11 @@
 }
 
 .app-lib button:hover {
+    cursor: pointer;
     background-color: #DDDDDD;
 }
 
-.app-lib button:active  {
+.app-lib button:active {
     box-shadow: 0.1em 0.1em 0.1em black;
     transform: translateY(0.05em);
 }

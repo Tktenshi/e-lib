@@ -71,7 +71,7 @@ class Settings extends React.Component {
                 <label>Количество страниц
                     <input type="number" step="1" name="pages" value={this.state.pages} onChange={this.handleChange}/>
                 </label>
-                <button onClick={this.saveClick}>Сохранить</button>
+                <button className="settings_save" onClick={this.saveClick}>Сохранить</button>
             </fieldset>
         )
     }

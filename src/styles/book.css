@@ -1,7 +1,12 @@
-.book{
-  /*display: flex;*/
-  /*flex-wrap: wrap;*/
-  border: 2px solid black;
-  min-width: 11.6em;
-  display: inline;
+.book {
+    /*display: flex;*/
+    /*flex-wrap: wrap;*/
+    border: 2px solid black;
+    min-width: 11.6em;
+    display: inline;
+}
+
+.book:hover {
+    cursor: pointer;
+    background-color: #DDDDDD;
 }
