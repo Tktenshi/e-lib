@@ -29,8 +29,8 @@ class Book extends React.Component {
             <fieldset className="book">
                 <p>{this.props.bookName}</p>
                 <p>Автор: {this.props.author}</p>
-                <button onClick={this.btnEditClick}>ред</button>
-                <button onClick={this.btnDelClick}>дел</button>
+                <button className="button" onClick={this.btnEditClick}>ред</button>
+                <button className="button" onClick={this.btnDelClick}>дел</button>
                 {
                     this.state.typeAlert &&
                     <Alert typeAlert={this.state.typeAlert} alertConfirm={this.alertConfirm}/>

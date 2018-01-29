@@ -22,17 +22,20 @@ class Settings extends React.Component {
     }
 
     saveClick = () => {
-        //2018-01-27
         if (!this.state.bookName) {
             alert("Введите название книги");
             return;
         }
-        if (isNaN(+this.state.pages)) {
+        if (isNaN(+this.state.pages) || +this.state.pages < 0) {
             alert("Количество страниц должно быть числом");
             return;
         }
-        if (this.state.year && !/^\d{4}\.\d{2}\.\d{2}$/.test(this.state.year)) {
-            alert("Год издания должен быть в формате 'ГГГГ.ММ.ДД'");
+        // if (this.state.year && !/^\d{4}\.\d{2}\.\d{2}$/.test(this.state.year)) {
+        //     alert("Дата издания должна быть в формате 'ГГГГ.ММ.ДД'");
+        //     return;
+        // }
+        if (this.state.year && !/^\d{4}$/.test(this.state.year)) {
+            alert("Год издания должен быть в формате 'ГГГГ'");
             return;
         }
         if (this.props.currentBook.id) {
@@ -58,20 +61,23 @@ class Settings extends React.Component {
         return (
             <fieldset className="fieldset settings">
                 <legend className="main-header">Настройки</legend>
-                <label>Название книги
-                    <input type="text" name="bookName" value={this.state.bookName} onChange={this.handleChange}/>
-                </label>
-                <label>Автор
-                    <input type="text" name="author" value={this.state.author} onChange={this.handleChange}/>
-                </label>
-                <label>Год издания
-                    <input type="date" placeholder="ГГГГ.ММ.ДД" name="year" value={this.state.year}
-                           onChange={this.handleChange}/>
-                </label>
-                <label>Количество страниц
-                    <input type="number" step="1" name="pages" value={this.state.pages} onChange={this.handleChange}/>
-                </label>
-                <button className="settings_save" onClick={this.saveClick}>Сохранить</button>
+                <div className="fieldset-container">
+                    <label>Название книги
+                        <input type="text" className="input" name="bookName" value={this.state.bookName} onChange={this.handleChange}/>
+                    </label>
+                    <label>Автор
+                        <input type="text" className="input" name="author" value={this.state.author} onChange={this.handleChange}/>
+                    </label>
+                    <label>Год издания
+                        <input type="number" className="input settings-year" placeholder="ГГГГ" name="year" min="1000" value={this.state.year}
+                               onChange={this.handleChange}/>
+                    </label>
+                    <label>Количество страниц
+                        <input type="number" className="input settings-page" step="1" name="pages" min="0" value={this.state.pages}
+                               onChange={this.handleChange}/>
+                    </label>
+                    <button className="button settings_save" onClick={this.saveClick}>Сохранить</button>
+                </div>
             </fieldset>
         )
     }

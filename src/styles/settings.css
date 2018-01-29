@@ -1,6 +1,6 @@
 .settings {
-    /*height: 350px;*/
-    max-width: 11.1em;
+    height: 20em;
+    /*max-width: 11.1em;*/
     /*flex-grow: 1;*/
     /*flex-shrink: 1;*/
     /*border-style: none solid solid solid;*/
@@ -8,10 +8,29 @@
     /*display: flex;*/
     /*flex-direction: column;*/
     /*align-items: center;*/
+    /*justify-content: center;*/
 }
 
 .settings_save{
+    align-self: center;
+}
 
+.settings-year{
+    max-width: 4em;
+}
+
+.settings-page{
+    max-width: 4em;
+}
+
+.fieldset-container{
+    /*border: 2px solid red;*/
+    width: 100%;
+    height: 93%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
 }
 
 /*.main-header {*/

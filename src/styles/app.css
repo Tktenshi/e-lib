@@ -2,17 +2,17 @@
 
 .app-lib {
     font: 18px 'Comic Sans MS', serif;
-    margin: 1em;
+    margin: 1em 1.7em;
     display: flex;
     /*flex-wrap: wrap;*/
     align-items: flex-start;
     /*width: 100%;*/
-    justify-content: center;
+    /*justify-content: space-between;*/
 }
 
-.app-lib input:not([type="radio"]) {
+.input {
     font: 1em 'Comic Sans MS', serif;
-    max-width: 10em;
+    max-width: 9em;
     border: 2px solid black;
     display: block;
 }
@@ -21,7 +21,7 @@
     display: block;
 }
 
-.app-lib button {
+.button {
     font: 0.9em 'Comic Sans MS', serif;
     outline: none;
     border: 2px solid black;
@@ -30,12 +30,12 @@
     background-color: white;
 }
 
-.app-lib button:hover {
+.button:hover {
     cursor: pointer;
     background-color: #DDDDDD;
 }
 
-.app-lib button:active {
+.button:active {
     box-shadow: 0.1em 0.1em 0.1em black;
     transform: translateY(0.05em);
 }

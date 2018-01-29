@@ -17,8 +17,8 @@ class FilterSearch extends React.Component {
                 </fieldset>
                 <fieldset className="fieldset">
                     <legend>Поиск</legend>
-                    <input type="text"/>
-                    <button>Найти</button>
+                    <input type="text" className="input"/>
+                    <button className="button">Найти</button>
                 </fieldset>
             </div>
         )
