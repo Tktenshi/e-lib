@@ -16,6 +16,7 @@
 }
 
 .settings-year{
+    display: inline;
     max-width: 4em;
 }
 

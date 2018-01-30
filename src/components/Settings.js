@@ -63,24 +63,29 @@ class Settings extends React.Component {
                 <legend className="main-header">Настройки</legend>
                 <div className="fieldset-container">
                     <label>Название книги
-                        <input type="text" className="input" name="bookName" value={this.state.bookName} onChange={this.handleChange}/>
-                    </label>
-                    <label>Автор
-                        <input type="text" className="input" name="author" value={this.state.author} onChange={this.handleChange}/>
-                    </label>
-                    <label>Год издания
-                        <input type="number" className="input settings-year" placeholder="ГГГГ" name="year" min="1000" value={this.state.year}
+                        <input type="text" className="input" name="bookName" value={this.state.bookName}
                                onChange={this.handleChange}/>
                     </label>
+                    <label>Автор
+                        <input type="text" className="input" name="author" value={this.state.author}
+                               onChange={this.handleChange}/>
+                    </label>
+                    <label>Год издания
+                        <input type="number" className="input settings-year" placeholder="ГГГГ" name="year" min="1000"
+                               value={this.state.year}
+                               onChange={this.handleChange}/>
+                        <img src={require("../imgs/calendar.png")} alt=""/>
+                    </label>
                     <label>Количество страниц
-                        <input type="number" className="input settings-page" step="1" name="pages" min="0" value={this.state.pages}
+                        <input type="number" className="input settings-page" step="1" name="pages" min="0"
+                               value={this.state.pages}
                                onChange={this.handleChange}/>
                     </label>
                     <button className="button settings_save" onClick={this.saveClick}>Сохранить</button>
                 </div>
             </fieldset>
-        )
+    )
     }
-}
+    }
 
-export default Settings;
+    export default Settings;
