@@ -60,7 +60,7 @@ class Settings extends React.Component {
     render() {
         return (
             <fieldset className="fieldset settings">
-                <legend className="main-header">Настройки</legend>
+                <legend className="main_header">Настройки</legend>
                 <div className="fieldset-container">
                     <label>Название книги
                         <input type="text" className="input" name="bookName" value={this.state.bookName}
@@ -71,13 +71,15 @@ class Settings extends React.Component {
                                onChange={this.handleChange}/>
                     </label>
                     <label>Год издания
-                        <input type="number" className="input settings-year" placeholder="ГГГГ" name="year" min="1000"
-                               value={this.state.year}
-                               onChange={this.handleChange}/>
-                        <img src={require("../imgs/calendar.png")} alt=""/>
+                        <div className="settings_year--container">
+                            <input type="number" className="input settings_year--input" placeholder="ГГГГ" name="year" min="1000"
+                                   value={this.state.year}
+                                   onChange={this.handleChange}/>
+                            <img src={require("../imgs/calendar.png")} alt=""/>
+                        </div>
                     </label>
                     <label>Количество страниц
-                        <input type="number" className="input settings-page" step="1" name="pages" min="0"
+                        <input type="number" className="input settings_page" step="1" name="pages" min="0"
                                value={this.state.pages}
                                onChange={this.handleChange}/>
                     </label>

@@ -1,5 +1,6 @@
 .settings {
     height: 20em;
+    min-width: 11em;
     /*max-width: 11.1em;*/
     /*flex-grow: 1;*/
     /*flex-shrink: 1;*/
@@ -15,24 +16,23 @@
     align-self: center;
 }
 
-.settings-year{
-    display: inline;
-    max-width: 4em;
-}
-
-.settings-page{
-    max-width: 4em;
-}
-
-.fieldset-container{
-    /*border: 2px solid red;*/
-    width: 100%;
-    height: 93%;
+.settings_year--container{
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    /*display: inline;*/
+    /*max-width: 4em;*/
 }
+
+.settings_year--input{
+    /*display: inline;*/
+    max-width: 4em;
+}
+
+.settings_page{
+    max-width: 4em;
+}
+
+
 
 /*.main-header {*/
 /*font-size: 1rem;*/

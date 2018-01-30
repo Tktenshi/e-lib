@@ -10,15 +10,17 @@ class FilterSearch extends React.Component {
     render() {
         return (
             <div className="filter-search">
-                <fieldset className="fieldset">
+                <fieldset className="fieldset filter">
                     <legend>Сортировочка</legend>
-                    <label><input type="radio"/> По названию</label>
-                    <label><input type="radio"/> По автору</label>
+                    <div className="fieldset-container">
+                        <label><input type="radio"/> По названию</label>
+                        <label><input type="radio"/> По автору</label>
+                    </div>
                 </fieldset>
-                <fieldset className="fieldset">
+                <fieldset className="fieldset search">
                     <legend>Поиск</legend>
                     <input type="text" className="input"/>
-                    <button className="button">Найти</button>
+                    <button className="button search_button">Найти</button>
                 </fieldset>
             </div>
         )

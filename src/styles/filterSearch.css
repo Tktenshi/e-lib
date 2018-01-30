@@ -1,7 +1,24 @@
 .filter-search{
     width: 100%;
+    min-height: 8.2em;
     display: flex;
     flex-wrap: wrap;
     /*justify-content: space-between;*/
     /*border: 2px solid blue;*/
+}
+
+.filter-search .fieldset-container{
+    height: 65%;
+}
+
+.filter{
+    min-width: 13em;
+}
+
+.search{
+    min-width: 13em;
+}
+
+.search_button{
+    float: right;
 }

@@ -2,11 +2,34 @@
     /*display: flex;*/
     /*flex-wrap: wrap;*/
     border: 2px solid black;
-    min-width: 11.6em;
+    min-width: 14.2em;
     display: inline;
+    margin: 1em;
 }
 
 .book:hover {
     cursor: pointer;
     background-color: #DDDDDD;
+}
+
+.book_text{
+    margin: 0;
+}
+
+.book_button{
+    margin: 0.6em;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+
+.book_icon{
+    border: 1px solid red;
+    width: 30px;
+    height: 30px;
+    /*font-size: 2em;*/
+    /*line-height: 1.3em;*/
+    /*width: 40px;*/
+    /*height: 40px;*/
+    /*background: url(../imgs/trash.png) no-repeat;*/
 }
