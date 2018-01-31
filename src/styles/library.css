@@ -14,3 +14,9 @@
     /*flex-direction: column;*/
 
 }
+
+@media screen and (max-width: 620px), screen and (max-device-width: 620px) {
+    .library {
+        width: 18em;
+    }
+}
