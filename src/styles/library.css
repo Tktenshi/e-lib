@@ -5,12 +5,12 @@
     /*flex-grow: 20;*/
     /*flex-shrink: 1;*/
     /*align-self: stretch;*/
-    display: flex;
-    max-width: calc(99.9% - 14.1em);
+    /*display: flex;*/
+    /*max-width: calc(99.9% - 14.1em);*/
     /*justify-content: flex-start;*/
     /*align-items: flex-start;*/
     /*align-content: flex-start;*/
-    flex-wrap: wrap;
+    /*flex-wrap: wrap;*/
     /*flex-direction: column;*/
 
 }
