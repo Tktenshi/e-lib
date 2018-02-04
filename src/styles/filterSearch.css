@@ -29,10 +29,8 @@
     }
 }
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    @media screen and (max-width: 900px), screen and (max-device-width: 900px) {
-        .filter-search {
-            max-width: 12em;
-        }
+@media screen and (-ms-high-contrast: active) and (max-width: 900px), screen and (-ms-high-contrast: none) and (max-width: 900px) {
+    .filter-search {
+        max-width: 30em;
     }
 }
