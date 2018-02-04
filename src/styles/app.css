@@ -63,6 +63,9 @@
     .app-lib {
         flex-direction: column;
         align-items: center;
+    }
 
+    .fieldset {
+        margin: 0.5em 1em;
     }
 }

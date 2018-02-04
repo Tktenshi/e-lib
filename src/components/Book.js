@@ -29,8 +29,8 @@ class Book extends React.Component {
             <fieldset className="book">
                 <p className="book_text">{this.props.bookName}</p>
                 <p className="book_text">Автор: {this.props.author}</p>
-                <button className="button book_button" onClick={this.btnEditClick}><img className="book_icon" src={require("../imgs/edit3.png")} alt="ред."/></button>
-                <button className="button book_button" onClick={this.btnDelClick}><img className="book_icon" src={require("../imgs/trash.png")} alt="удалить"/></button>
+                <button className="button book_button" onClick={this.btnEditClick}><img className="book_icon--edit" src={require("../imgs/edit.png")} alt="ред."/></button>
+                <button className="button book_button" onClick={this.btnDelClick}><img className="book_icon--del" src={require("../imgs/trash.png")} alt="удалить"/></button>
                 {
                     this.state.typeAlert &&
                     <Alert typeAlert={this.state.typeAlert} alertConfirm={this.alertConfirm}/>
