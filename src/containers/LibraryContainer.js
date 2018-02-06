@@ -1,5 +1,6 @@
 import Library from '../components/Library'
 import {connect} from 'react-redux';
+import {showAlert} from "../actions/pageActions";
 // import {changeQuickAccessCur} from "../actions/pageActions";
 
 const mapStateToProps = (state) => {
@@ -10,9 +11,9 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        // changeBookSettings: function (currencyList) {
-        //     dispatch(changeQuickAccessCur(currencyList))
-        // },
+        showAlert: function (alertData) {
+            dispatch(showAlert(alertData))
+        },
     };
 };
 

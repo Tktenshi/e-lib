@@ -5,7 +5,7 @@ export default class Alert extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            show: this.props.typeAlert
+            show: this.props.alertData && this.props.alertData.alertType
         };
 
         this.alertOptions = {
@@ -23,12 +23,12 @@ export default class Alert extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.setState({show: nextProps.typeAlert || false})
+        this.setState({show: (nextProps.alertData && nextProps.alertData.alertType) || false});
     }
 
     confirmAlert = () => {
         this.hideAlert();
-        this.props.alertConfirm && this.props.alertConfirm();
+        this.props.alertData && this.props.alertData.alertConfirm();
     };
 
     hideAlert = () => {
@@ -36,7 +36,7 @@ export default class Alert extends Component {
     };
 
     render() {
-        const options = this.alertOptions[this.props.typeAlert];
+        const options = this.alertOptions[(this.props.alertData && this.props.alertData.alertType) || "delete"];
         return (
             <div>
                 <SweetAlert className="sweet-alert"

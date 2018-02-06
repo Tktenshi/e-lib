@@ -1,5 +1,5 @@
 // import {createAction} from 'redux-actions';
-import {CHANGED_BOOKS, SET_EDIT_BOOK, SORT_BOOKS} from "../consts/actionTypeConsts";
+import {CHANGED_BOOKS, SET_EDIT_BOOK, SHOW_ALERT, SORT_BOOKS} from "../consts/actionTypeConsts";
 import {getItem, setItem} from "../utils/LocalStorage";
 import {books} from "../consts/consts";
 
@@ -68,12 +68,17 @@ function sort(booksArr) {
     if (!sortOption)
         return booksArr;
     else {
-        //тут сортировка
         booksArr.sort(function (a, b) {
             return a[sortOption] > b[sortOption];
         });
-        console.log(booksArr);
         return booksArr;
     }
+}
+
+export function showAlert(alertData) {
+    return {
+        type: SHOW_ALERT,
+        payload: alertData
+    };
 }
 

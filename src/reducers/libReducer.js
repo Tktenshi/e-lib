@@ -1,4 +1,4 @@
-import {CHANGED_BOOKS, SET_EDIT_BOOK, SORT_BOOKS} from "../consts/actionTypeConsts";
+import {CHANGED_BOOKS, SET_EDIT_BOOK, SHOW_ALERT, SORT_BOOKS} from "../consts/actionTypeConsts";
 
 const initionalState = {
     currentBook: {}
@@ -21,6 +21,11 @@ export function libReducer(state = initionalState, action) {
             return {
                 ...state,
                 books: action.payload,
+            };
+        case SHOW_ALERT:
+            return {
+                ...state,
+                alertData: action.payload,
             };
         default:
             return state;
