@@ -6,6 +6,7 @@ class FilterSort extends React.Component {
         super(props);
         this.state = {
             sort: "bookName",
+            filter: "",
         };
     }
 
@@ -18,6 +19,18 @@ class FilterSort extends React.Component {
             sort: evt.target.value,
         });
         this.props.sortBooks(evt.target.value);
+    };
+
+    clickSearch = () => {
+        this.setState({
+            filter: "",
+        });
+    };
+
+    handleChange = (evt) => {
+        this.setState({
+            filter: evt.target.value,
+        });
     };
 
     render() {
@@ -40,8 +53,8 @@ class FilterSort extends React.Component {
                 </fieldset>
                 <fieldset className="fieldset filter">
                     <legend>Поиск</legend>
-                    <input type="text" className="input"/>
-                    <button className="button search_button">Найти</button>
+                    <input type="text" className="input" value={this.state.filter} onChange={this.handleChange}/>
+                    <button className="button search_button" onClick={this.clickSearch}>Найти</button>
                 </fieldset>
             </div>
         )
