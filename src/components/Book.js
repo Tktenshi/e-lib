@@ -25,6 +25,8 @@ class Book extends React.Component {
     };
 
     render() {
+        console.log("typeAlert", this.state.typeAlert);
+        console.log("alertConfirm", this.alertConfirm);
         return (
             <fieldset className="book">
                 <p className="book_text">{this.props.bookName}</p>

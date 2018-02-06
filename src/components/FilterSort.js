@@ -9,6 +9,10 @@ class FilterSort extends React.Component {
         };
     }
 
+    componentDidMount() {
+        this.props.sortBooks("bookName");
+    }
+
     changeSort = (evt) => {
         this.setState({
             sort: evt.target.value,

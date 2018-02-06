@@ -70,7 +70,7 @@ function sort(booksArr) {
     else {
         //тут сортировка
         booksArr.sort(function (a, b) {
-            return a[sortOption] - b[sortOption];
+            return a[sortOption] > b[sortOption];
         });
         console.log(booksArr);
         return booksArr;
