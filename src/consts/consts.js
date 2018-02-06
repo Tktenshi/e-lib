@@ -1,1 +1,1 @@
-export const books = "books";
+export const books = "books";  //for LocaleStorage

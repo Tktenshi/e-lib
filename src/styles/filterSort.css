@@ -1,4 +1,4 @@
-.filter-search {
+.filter-sort {
     width: 100%;
     min-height: 8.2em;
     display: flex;
@@ -7,7 +7,7 @@
     /*border: 2px solid blue;*/
 }
 
-.filter-search .fieldset-container {
+.filter-sort .fieldset-container {
     height: 65%;
 }
 
@@ -15,7 +15,7 @@
     min-width: 13em;
 }
 
-.search {
+.sort {
     min-width: 13em;
 }
 
@@ -24,13 +24,13 @@
 }
 
 @media screen and (max-width: 620px), screen and (max-device-width: 620px) {
-    .filter-search {
+    .filter-sort {
         justify-content: center;
     }
 }
 
 @media screen and (-ms-high-contrast: active) and (max-width: 900px), screen and (-ms-high-contrast: none) and (max-width: 900px) {
-    .filter-search {
+    .filter-sort {
         max-width: 30em;
     }
 }

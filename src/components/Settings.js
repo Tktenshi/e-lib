@@ -19,6 +19,7 @@ class Settings extends React.Component {
             author: nextProps.currentBook.author || "",
             year: nextProps.currentBook.year || "",
             pages: +nextProps.currentBook.pages || "",
+            error: "",
         });
     }
 
@@ -59,7 +60,10 @@ class Settings extends React.Component {
     };
 
     handleChange = (evt) => {
-        this.setState({[evt.target.name]: evt.target.value});
+        this.setState({
+            [evt.target.name]: evt.target.value,
+            error: "",
+        });
     };
 
     render() {
