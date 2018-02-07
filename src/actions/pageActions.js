@@ -1,10 +1,11 @@
 // import {createAction} from 'redux-actions';
-import {CHANGED_BOOKS, SET_EDIT_BOOK, SHOW_ALERT, SORT_BOOKS} from "../consts/actionTypeConsts";
+import {CHANGED_BOOKS, SET_EDIT_BOOK, SHOW_ALERT, FILTER_SORT_BOOKS} from "../consts/actionTypeConsts";
 import {getItem, setItem} from "../utils/LocalStorage";
 import {books} from "../consts/consts";
 
 const generateId = () => '_' + Math.random().toString(36).substr(2, 9);
 let sortOption;
+let filterText;
 
 // export const showAlert = createAction(SHOW_ALERT);
 
@@ -15,7 +16,7 @@ export function createBook(book) {
     setItem(books, booksArr);
     return {
         type: CHANGED_BOOKS,
-        payload: sort(booksArr)
+        payload: sort(filter(booksArr))
     };
 }
 
@@ -28,7 +29,7 @@ export function editBook(book) {
     setItem(books, booksArr);
     return {
         type: CHANGED_BOOKS,
-        payload: sort(booksArr)
+        payload: sort(filter(booksArr))
     };
 }
 
@@ -40,7 +41,7 @@ export function deleteBook(bookId) {
     setItem(books, booksArr);
     return {
         type: CHANGED_BOOKS,
-        payload: sort(booksArr)
+        payload: sort(filter(booksArr))
     };
 }
 
@@ -55,24 +56,40 @@ export function setEditBook(bookId) {
     };
 }
 
+export function filterBooks(filterT) {
+    const booksArr = getItem(books) || [];
+    filterText = filterT;
+    return {
+        type: FILTER_SORT_BOOKS,
+        payload: sort(filter(booksArr))
+    };
+}
+
 export function sortBooks(selectOption) {
     const booksArr = getItem(books) || [];
     sortOption = selectOption;
     return {
-        type: SORT_BOOKS,
-        payload: sort(booksArr)
+        type: FILTER_SORT_BOOKS,
+        payload: sort(filter(booksArr))
     };
 }
 
+function filter(booksArr) {
+    if (filterText && booksArr) {
+        booksArr = booksArr.filter((el) => {
+            return ~el.bookName.indexOf(filterText) || ~el.author.indexOf(filterText);
+        });
+    }
+    return booksArr;
+}
+
 function sort(booksArr) {
-    if (!sortOption)
-        return booksArr;
-    else {
+    if (sortOption && booksArr) {
         booksArr.sort(function (a, b) {
             return a[sortOption] > b[sortOption];
         });
-        return booksArr;
     }
+    return booksArr;
 }
 
 export function showAlert(alertData) {

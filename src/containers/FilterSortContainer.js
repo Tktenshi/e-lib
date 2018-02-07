@@ -1,6 +1,6 @@
 import FilterSort from '../components/FilterSort'
 import {connect} from 'react-redux';
-import {sortBooks} from "../actions/pageActions";
+import {filterBooks, sortBooks} from "../actions/pageActions";
 
 const mapStateToProps = (state) => {
     return {
@@ -12,6 +12,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         sortBooks: function (selectOption) {
             dispatch(sortBooks(selectOption))
+        },
+        filterBooks: function (filterText) {
+            dispatch(filterBooks(filterText))
         },
         // deleteBook: function (bookId) {
         //     dispatch(deleteBook(bookId))
