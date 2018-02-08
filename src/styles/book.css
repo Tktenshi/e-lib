@@ -1,6 +1,4 @@
 .book {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
     border: 2px solid black;
     min-width: 14.2em;
     display: inline;
@@ -31,18 +29,12 @@
 }
 
 .book_icon--del {
-    /*border: 1px solid red;*/
     position: relative;
     width: 24px;
     height: 27px;
     padding: 5.5px 7px;
     top: -1px;
     left: -1px;
-    /*font-size: 2em;*/
-    /*line-height: 1.3em;*/
-    /*width: 40px;*/
-    /*height: 40px;*/
-    /*background: url(../imgs/trash.png) no-repeat;*/
 }
 
 .book_icon--edit {
@@ -51,8 +43,6 @@
     height: 38px;
     top: -2px;
     left: 1px;
-    /*width: 35px;*/
-    /*height: 35px;*/
 }
 
 @media screen and (max-width: 620px), screen and (max-device-width: 620px) {

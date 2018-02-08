@@ -7,12 +7,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        // showAlert: function (alertData) {
-        //     dispatch(showAlert(alertData))
-        // },
-    };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Alert);
+export default connect(mapStateToProps)(Alert);

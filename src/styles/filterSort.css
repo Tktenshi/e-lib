@@ -3,8 +3,6 @@
     min-height: 8.2em;
     display: flex;
     flex-wrap: wrap;
-    /*justify-content: space-between;*/
-    /*border: 2px solid blue;*/
 }
 
 .filter-sort .fieldset-container {

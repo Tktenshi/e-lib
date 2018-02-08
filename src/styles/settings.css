@@ -1,70 +1,25 @@
 .settings {
     height: 22em;
     min-width: 11em;
-    /*max-width: 11.1em;*/
-    /*flex-grow: 1;*/
-    /*flex-shrink: 1;*/
-    /*border-style: none solid solid solid;*/
-    /*border: 2px solid green;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
 }
 
-.settings_save{
+.settings_save {
     align-self: center;
 }
 
-.settings_year--container{
+.settings_year--container {
     display: flex;
     align-items: center;
-    /*display: inline;*/
-    /*max-width: 4em;*/
 }
 
-.settings_year--input{
-    /*display: inline;*/
+.settings_year--input {
     max-width: 4em;
 }
 
-.settings_page{
+.settings_page {
     max-width: 4em;
 }
 
-.error-input{
- border-color: red;
+.error-input {
+    border-color: red;
 }
-
-
-
-/*.main-header {*/
-/*font-size: 1rem;*/
-/*position: relative;*/
-/*top: -1.3em;*/
-/*!*left: 0.4em;*!*/
-/*}*/
-
-/*.main-header:before {*/
-/*display: inline-block;*/
-/*height: 0;*/
-/*width: 0.5em;*/
-/*!*z-index: 999;*!*/
-/*position: relative;*/
-/*top: -0.3em;*/
-/*!*left: -0.55em;*!*/
-/*content: "";*/
-/*border-top: solid black;*/
-/*}*/
-
-/*.main-header:after {*/
-/*display: inline-block;*/
-/*height: 0;*/
-/*width: 4.4em;*/
-/*!*z-index: 999;*!*/
-/*position: relative;*/
-/*top: -1.7em;*/
-/*left: 6em;*/
-/*content: "";*/
-/*border-top: solid black;*/
-/*}*/

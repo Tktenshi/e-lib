@@ -7,8 +7,6 @@ const generateId = () => '_' + Math.random().toString(36).substr(2, 9);
 let sortOption;
 let filterText;
 
-// export const showAlert = createAction(SHOW_ALERT);
-
 export function createBook(book) {
     const booksArr = getItem(books) || [];
     book.id = generateId();
@@ -98,4 +96,3 @@ export function showAlert(alertData) {
         payload: alertData
     };
 }
-
