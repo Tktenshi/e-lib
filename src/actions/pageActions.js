@@ -2,6 +2,7 @@
 import {CHANGED_BOOKS, SET_EDIT_BOOK, SHOW_ALERT, FILTER_SORT_BOOKS} from "../consts/actionTypeConsts";
 import {getItem, setItem} from "../utils/LocalStorage";
 import {books} from "../consts/consts";
+import "../utils/polyfill";
 
 const generateId = () => '_' + Math.random().toString(36).substr(2, 9);
 let sortOption;
@@ -84,7 +85,8 @@ function filter(booksArr) {
 function sort(booksArr) {
     if (sortOption && booksArr) {
         booksArr.sort(function (a, b) {
-            return a[sortOption] > b[sortOption];
+            if (a[sortOption] > b[sortOption]) return 1;
+            else return -1
         });
     }
     return booksArr;
