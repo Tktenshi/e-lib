@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles/library.css';
 import Book from "../containers/BookContainer";
-import {getItem} from "../utils/LocalStorage";
+import {getItem} from "../utils/localStorage";
 import {books} from "../consts/consts";
 import FilterSort from "../containers/FilterSortContainer";
 import Alert from "../containers/AlertContainer";

@@ -1,10 +1,10 @@
 import {CHANGED_BOOKS, SET_EDIT_BOOK, SHOW_ALERT, FILTER_SORT_BOOKS} from "../consts/actionTypeConsts";
 
-const initionalState = {
+const initialState = {
     currentBook: {}
 };
 
-export function libReducer(state = initionalState, action) {
+export function libReducer(state = initialState, action) {
     switch (action.type) {
         case CHANGED_BOOKS:
             return {
@@ -13,6 +13,7 @@ export function libReducer(state = initionalState, action) {
                 currentBook: {}
             };
         case SET_EDIT_BOOK:
+
             return {
                 ...state,
                 currentBook: action.payload

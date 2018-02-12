@@ -94,7 +94,7 @@ class Settings extends React.Component {
                                    min="1000"
                                    placeholder="ГГГГ"
                                    onChange={this.handleChange}/>
-                            <img src={require("../imgs/calendar.png")} alt=""/>
+                            <img src={require("../images/calendar.png")} alt=""/>
                         </div>
                     </label>
                     <label>Количество страниц

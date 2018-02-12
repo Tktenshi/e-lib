@@ -22,9 +22,6 @@ class FilterSort extends React.Component {
     };
 
     clickSearch = () => {
-        // this.setState({
-        //     filter: "",
-        // });
         this.props.filterBooks(this.state.filter);
     };
 
